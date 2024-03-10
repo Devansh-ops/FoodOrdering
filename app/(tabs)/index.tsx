@@ -4,23 +4,22 @@ import { Text, View } from '@/components/Themed';
 import Colors from '@/constants/Colors';
 import products from '@/assets/data/products';
 
-const product = products[0];
+import ProductListItem from '@/components/ProductListItem';
 
-export default function TabOneScreen() {
+export default function MenuScreen() {
   return (
-    <View style={styles.container}>
-      <Image source={product.image} style={styles.image} />
-      <Text style={styles.title}>{product.name}</Text>
-      <Text style={styles.price}>${product.price}</Text>
+    <View>
+      <ProductListItem product={products[0]} />
+      <ProductListItem product={products[1]} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    padding: 10,
+    borderRadius: 20,
   },
   image: {
     width: '100%',
