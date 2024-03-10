@@ -23,10 +23,14 @@ container: {
     alignItems: 'center',
     padding: 10,
     borderRadius: 20,
+    flex: 1,
 },
 image: {
     width: '100%',
+    height: '100%',
+    flex: 1,
     aspectRatio: 1,
+    resizeMode: 'contain'
 },
 title: {
     fontSize: 18,
