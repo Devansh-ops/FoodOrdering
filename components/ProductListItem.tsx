@@ -4,7 +4,11 @@ import Colors from '@/constants/Colors';
 
 import { Product } from '@/types';
 
-export default function ProductListItem({ product }: { product: Product} ) {
+type ProductListItemProps = {
+    product: Product,
+}
+
+export default function ProductListItem({ product }: ProductListItemProps ) {
     return (
         <View style={styles.container}>
             <Image source={product.image} style={styles.image} />
